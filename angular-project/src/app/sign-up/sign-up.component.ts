@@ -21,10 +21,12 @@ export class SignUpComponent {
 
   passwordInputValue: string = '';
   repeatPasswordInputValue: string = '';
+  matchPasswords: boolean = false;
 
   errorMessage: string = '';
   errorStatus: boolean = false;
   success: boolean = false;
+  
 
   constructor(
     private router: Router,
@@ -67,10 +69,12 @@ export class SignUpComponent {
       this.errorMessage = 'Passwords do not match';
       this.errorStatus = true;
       this.signUpForm.controls['password'].setValue('');
+      this.matchPasswords = false;
     } else {
       this.errorMessage = '';
       this.errorStatus = false;
       this.signUpForm.controls['password'].setValue(this.passwordInputValue);
+      this.matchPasswords = true;
     }
   }
 

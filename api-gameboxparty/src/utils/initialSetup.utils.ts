@@ -1,6 +1,21 @@
 import RoleModel from '../models/roles';
 import UserModel from '../models/users';
 import { encryptPassword} from '../utils/auth.utils';
+import * as fs from 'fs';
+
+export const createUploadsFolder = (): void => {
+    const uploadsPath = './uploads';
+    const imgPath = './uploads/img';
+
+    if (!fs.existsSync(uploadsPath)) {
+        fs.mkdirSync(uploadsPath);
+
+        if (!fs.existsSync(imgPath)) {
+            fs.mkdirSync(imgPath);
+        }
+    }
+};
+
 
 export const createRoles = async (): Promise<void> => {
     try {

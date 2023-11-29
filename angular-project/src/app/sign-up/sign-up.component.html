@@ -23,7 +23,7 @@
                     </div>
                     <app-password-input [placeholder]="'Password'" (passwordValueChange)="onPasswordInput($event)"></app-password-input>
                     <app-password-input [placeholder]="'Repeat password'" (passwordValueChange)="onRepeatPasswordInput($event)"></app-password-input>
-                    <button type="submit" class="btn btn-gradient btn-lg col-md-5"><span
+                    <button [disabled]="matchPasswords == false" type="submit" class="btn btn-gradient btn-lg col-md-5"><span
                             class="text-font text-light text-uppercase fw-lighter">Sign Up <i
                                 class="bi bi-box-arrow-in-right"></i></span></button>
                 </form>

@@ -4,8 +4,10 @@ import cors from 'cors';
 import * as initialSetup from './utils/initialSetup.utils';
 
 const app = express();
+
 initialSetup.createRoles();
 initialSetup.createMasterUser();
+initialSetup.createUploadsFolder();
 
 app.use(cors({
     credentials: true,

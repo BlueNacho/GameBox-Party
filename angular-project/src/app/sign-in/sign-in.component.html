@@ -2,7 +2,7 @@
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column justify-content-center">
         <main class="px-3 rounded-3 shadow bg-body bg-opacity-10">
             <div class="m-4">
-                <h2 class="text-font text-body text-uppercase">Sing In</h2>
+                <h2 class="text-font text-body text-uppercase">Sign In</h2>
                 <form [formGroup]="signInForm" (ngSubmit)="onSubmit(signInForm.value)" class="mx-4 my-4">
                     <div *ngIf="errorStatus" class="alert alert-danger" role="alert">
                         {{errorMessage}}
